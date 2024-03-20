@@ -8,7 +8,10 @@ class PanierController extends Controller
 {
 
     public function panier(){
+        $products=[];
+        if(session()->has("panier")){
         $products=session()->get("panier");
+        }
         return view("website.panier",compact("products"));
     }
 

@@ -46,6 +46,9 @@
                 </form>
             </li>
 
+
+{{-- vérifier l'accès au à l'utilisateur qui a le role === admin --}}
+            @if(Auth::check() && Auth::user()->role==="admin")
             <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -70,6 +73,9 @@
 
             </ul>
           </li>
+
+@endif
+
 
 
           <li class="nav-item">

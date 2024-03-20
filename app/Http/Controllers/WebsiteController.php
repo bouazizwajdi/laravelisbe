@@ -21,6 +21,11 @@ class WebsiteController extends Controller
         return view("website.produits",compact("products"));
     }
 
+    public function checkout(){
+        $products=session()->get("panier");
+        return view("website.checkout",compact("products"));	
+    }
+
     public function contact(){
         return view("website.contact");
     }

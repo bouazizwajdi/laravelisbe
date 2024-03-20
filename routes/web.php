@@ -41,6 +41,7 @@ Route::get('/{date}/{num}', [OrderController::class, 'show'])
 Route::get("/",[WebsiteController::class,'accueil'])->name('website.accueil');
 Route::get("/presentation",[WebsiteController::class,'presentation'])->name('website.presentation');
 Route::get("/produits",[WebsiteController::class,'produits'])->name('website.produits');
+Route::get("/checkout",[WebsiteController::class,'checkout'])->name('website.checkout');
 
 Route::get("/contact",[WebsiteController::class,'contact'])->name('website.contact');
 Route::post("/contact/save",[WebsiteController::class,'save'])->name("website.save");
